@@ -1,0 +1,15 @@
+{
+  "name": "Uniswap V2",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Uniswap V2": {
+        "url": "https://gap6p22o38.execute-api.eu-west-1.amazonaws.com/subgraphs/name/simone1999/uniswap",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": false
+      }
+    }
+  }
+}

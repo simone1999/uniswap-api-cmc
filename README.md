@@ -36,7 +36,7 @@ The documentation of the `/v1/` endpoints is [here](./v1.md).
 
 ## V2 Documentation
 
-The documentation of the `/v2/` endpoints is [here](./v2.md).
+The documentation of the `/v2/` endpoints is [here](./api_doc.md).
 
 ## Deploying the API
 

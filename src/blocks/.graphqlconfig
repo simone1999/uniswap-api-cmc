@@ -4,7 +4,7 @@
   "extensions": {
     "endpoints": {
       "Ethereum Blocks": {
-        "url": "https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks",
+        "url": "https://gap6p22o38.execute-api.eu-west-1.amazonaws.com/subgraphs/name/simone1999/ethereum-blocks",
         "headers": {
           "user-agent": "JS GraphQL"
         },

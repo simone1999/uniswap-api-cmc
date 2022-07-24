@@ -1,18 +1,17 @@
-# V2 Endpoints
+# Endpoints
 
-All Uniswap V2 pairs consist of two different tokens. ETH is not a native currency in Uniswap V2, and is represented
-only by WETH in the V2 pairs. 
+All IcecreamSwap pairs consist of two different tokens.
 
-The canonical WETH address used by the Uniswap interface is `0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2`. 
+The canonical WBRISE address used by the IcecreamSwap interface is `0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710`. 
 
-## [`/v2/summary`](https://api.uniswap.info/v2/summary)
+## [`/summary`](https://cmcapi.icecreamswap.com/summary)
 
-Returns data for the top ~1000 Uniswap V2 pairs, sorted by reserves. 
+Returns data for the top ~1000 IcecreamSwap pairs, sorted by reserves. 
 Results are edge cached for 15 minutes.
 
 ### Request
 
-`GET https://api.uniswap.info/v2/summary`
+`GET https://cmcapi.icecreamswap.com/summary`
 
 ### Response
 
@@ -27,14 +26,14 @@ Results are edge cached for 15 minutes.
 }
 ```
 
-## [`/v2/assets`](https://api.uniswap.info/v2/assets)
+## [`/assets`](https://cmcapi.icecreamswap.com/assets)
 
-Returns the tokens in the top ~1000 pairs on Uniswap V2, sorted by reserves. 
+Returns the tokens in the top ~1000 pairs on IcecreamSwap, sorted by reserves. 
 Results are edge cached for 24 hours.
 
 ### Request
 
-`GET https://api.uniswap.info/v2/assets`
+`GET https://cmcapi.icecreamswap.com/assets`
 
 ### Response
 
@@ -52,20 +51,20 @@ Results are edge cached for 24 hours.
 }
 ```
 
-## [`/v2/tickers`](https://api.uniswap.info/v2/tickers)
+## [`/tickers`](https://cmcapi.icecreamswap.com/tickers)
 
-Returns data for the top ~1000 Uniswap V2 pairs, sorted by reserves.
+Returns data for the top ~1000 IcecreamSwap pairs, sorted by reserves.
 Results are edge cached for 1 minute.
 
 ### Request
 
-`GET https://api.uniswap.info/v2/tickers`
+`GET https://cmcapi.icecreamswap.com/tickers`
 
 ### Response
 
 ```json5
 {
-  "0x..._0x...": {                    // the asset ids of ETH and ERC20 tokens, joined by an underscore
+  "0x..._0x...": {                    // the asset ids of ERC20 tokens, joined by an underscore
     "base_name": "...",             // token0 name
     "base_symbol": "...",           // token0 symbol
     "base_id": "0x...",             // token0 address
@@ -80,16 +79,16 @@ Results are edge cached for 1 minute.
 }
 ```
 
-## `/v2/orderbook/:pair`
+## `/orderbook/:pair`
 
-Returns simulated orderbook data for the given Uniswap V2 pair.
-Since Uniswap has a continuous orderbook, fixed amounts in an interval are chosen for bids and asks, 
-and prices are derived from the Uniswap V2 formula (accounting for both slippage and fees paid to LPs). 
+Returns simulated orderbook data for the given IcecreamSwap pair.
+Since IcecreamSwap has a continuous orderbook, fixed amounts in an interval are chosen for bids and asks, 
+and prices are derived from the IcecreamSwap formula (accounting for both slippage and fees paid to LPs). 
 Results are edge cached for 240 minutes.
 
 ### Request
 
-`GET https://api.uniswap.info/v2/orderbook/:pair`
+`GET https://cmcapi.icecreamswap.com/orderbook/:pair`
 
 ### URL Parameters
 
@@ -115,13 +114,13 @@ Results are edge cached for 240 minutes.
 
 ## `/v2/trades/:pair`
 
-Returns all swaps in the last 24 hours for the given Uniswap V2 pair. 
+Returns all swaps in the last 24 hours for the given IcecreamSwap pair. 
 Results are edge cached for 15 minutes.
 
 The pair address is the address of the two tokens in either order.
 The first address is considered the base in the response.
 
-Note because Uniswap V2 supports flash swaps and borrowing of both tokens in a pair, you may wish to exclude these 
+Note because IcecreamSwap supports flash swaps and borrowing of both tokens in a pair, you may wish to exclude these 
 trade types (types `"???"` and `"borrow-both"`).
 
 ### URL Parameters
@@ -130,7 +129,7 @@ trade types (types `"???"` and `"borrow-both"`).
 
 ### Request
 
-`GET https://api.uniswap.info/v2/trades/:pair`
+`GET https://cmcapi.icecreamswap.com/trades/:pair`
 
 ### Response
 

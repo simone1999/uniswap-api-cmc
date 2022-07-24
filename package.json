@@ -40,7 +40,7 @@
     "check:lint": "yarn lint:base",
     "check:format": "yarn format:base --check",
     "check:all": "yarn check:lint && yarn check:format",
-    "generate:v2": "graphql-codegen --config src/v2/apollo/codegen.yml",
+    "generate:v2": "graphql-codegen --config src/apollo/codegen.yml",
     "build": "sls package"
   }
 }

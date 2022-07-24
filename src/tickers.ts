@@ -1,6 +1,6 @@
 import { getAddress } from '@ethersproject/address'
 import { APIGatewayProxyHandler } from 'aws-lambda'
-import { createSuccessResponse, createServerErrorResponse } from '../utils/response'
+import { createSuccessResponse, createServerErrorResponse } from './utils/response'
 import { getTopPairs } from './_shared'
 
 interface ReturnShape {

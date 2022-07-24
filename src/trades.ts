@@ -3,7 +3,7 @@ import { APIGatewayProxyHandler } from 'aws-lambda'
 import BigNumber from 'bignumber.js'
 
 import { getSwaps } from './_shared'
-import { createSuccessResponse, createBadRequestResponse, createServerErrorResponse } from '../utils/response'
+import { createSuccessResponse, createBadRequestResponse, createServerErrorResponse } from './utils/response'
 
 export const handler: APIGatewayProxyHandler = async event => {
   if (!event.pathParameters?.pair || !/^0x[0-9a-fA-F]{40}_0x[0-9a-fA-F]{40}$/.test(event.pathParameters.pair)) {

@@ -2,7 +2,7 @@ import { getAddress } from '@ethersproject/address'
 import { APIGatewayProxyHandler } from 'aws-lambda'
 
 import { getTopPairs, Pair } from './_shared'
-import { createSuccessResponse, createServerErrorResponse } from '../utils/response'
+import { createSuccessResponse, createServerErrorResponse } from './utils/response'
 
 interface ReturnShape {
   [tokenAddress: string]: { id: string; name: string; symbol: string; maker_fee: '0'; taker_fee: '0.003' }
