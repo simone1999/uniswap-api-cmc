@@ -1,42 +1,19 @@
-# Uniswap API
+# IcecreamSwap API
 
-The Uniswap API is a set of **authenticated** endpoints used by market aggregators (e.g. coinmarketcap.com) to surface 
+The IcecreamSwap API is a set of public endpoints used by market aggregators (e.g. coinmarketcap.com) to surface 
 Uniswap liquidity and volume information. All information is fetched from the underlying subgraphs.
 
 The API is designed around the CoinMarketCap
 [requirements document](https://docs.google.com/document/d/1S4urpzUnO2t7DmS_1dc4EL4tgnnbTObPYXvDeBnukCg).
 
-Prefer the Uniswap subgraph for any Uniswap queries whenever possible. The respective subgraphs will always have more
+Prefer the IcecreamSwap subgraph for any IcecreamSwap queries whenever possible. The respective subgraphs will always have more
 recent data.
 
-V2 Subgraph: https://github.com/Uniswap/uniswap-v2-subgraph
+Subgraph: https://github.com/simone1999/uniswapv2-subgraph
 
-V1 Subgraph: https://github.com/graphprotocol/uniswap-subgraph
+## API Documentation
 
-## Getting an API Key
-
-Please fill out [this form](https://forms.gle/4xucinVsTTPu71bT6) if you would like to get an API key.
-
-## Using an API Key
-
-You can use an API key by setting it in the `x-api-key` header, like so:
-
-```sh
-curl -v --compressed https://api.uniswap.info/v2/tickers -H 'x-api-key: abcd1234'
-```
-
-## Segregated data
-
-Note the data returned by the V1 and V2 endpoints is segregated, i.e. there are no endpoints for combined data from 
-both Uniswap V1 and V2.
-
-## V1 Documentation
-
-The documentation of the `/v1/` endpoints is [here](./v1.md).
-
-## V2 Documentation
-
-The documentation of the `/v2/` endpoints is [here](./api_doc.md).
+The documentation of the endpoints is [here](./api_doc.md).
 
 ## Deploying the API
 
