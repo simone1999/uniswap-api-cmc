@@ -112,7 +112,7 @@ Results are edge cached for 240 minutes.
 }
 ```
 
-## `/v2/trades/:pair`
+## `/trades/:pair`
 
 Returns all swaps in the last 24 hours for the given IcecreamSwap pair. 
 Results are edge cached for 15 minutes.
